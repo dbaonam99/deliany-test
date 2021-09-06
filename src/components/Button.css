@@ -1,0 +1,49 @@
+.button {
+  width: max-content;
+  padding: 7px 20px;
+  transition: .3s;
+  font-size: 15px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  background: currentColor;
+  opacity: 0.2;
+  border-radius: 5px;
+  transition: .3s ease-in-out;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: calc(100% - 2px);
+  border: 1px currentColor solid ;
+  border-radius: 5px;
+  transition: .3s ease-in-out;
+  opacity: 0;
+  transform: scale(1.2);
+}
+
+.button:hover::after {
+  transform: scale(.0)
+}
+
+.button:hover::before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.button:active {
+  transform: scale(.9);
+}

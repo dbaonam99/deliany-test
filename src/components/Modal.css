@@ -1,0 +1,50 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  transition: all .2s ease-in-out;
+}
+
+.visible-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  min-width: 300px;
+  max-width: 500px;
+  background-color: #fff;
+  transition: all .2s ease-in-out;
+  transform: scale(.5);
+  padding: 25px 20px;
+}
+
+.visible-modal {
+  transform: scale(1);
+  border-radius: 15px;
+}
+
+.modal-header,
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-title {
+  margin: 0;
+  font-weight: bold;
+}
+
+.modal-body {
+  font-size: 14px;
+  padding: 5px 0;
+}
